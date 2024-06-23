@@ -5,7 +5,7 @@ const kafka = new Kafka({
   brokers: ['localhost:9092']
 })
 
-const consumer = kafka.consumer({ groupId: 'test-group-3' })
+const consumer = kafka.consumer({ groupId: 'test-group-4' })
 
 const run = async () => {
   await consumer.connect()
@@ -17,7 +17,8 @@ const run = async () => {
     },
   })
   
-  consumer.seek({ topic: 'test-topic', partition: 0, offset: 10 })
+  //Will work only if in topic exist more than 5 messages
+  consumer.seek({ topic: 'test-topic', partition: 0, offset: 5 })
 }
 
 run().catch(console.error)
