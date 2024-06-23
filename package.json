@@ -1,0 +1,18 @@
+{
+  "name": "kafka-example",
+  "version": "1.0.0",
+  "description": "This repository demonstrates a simple setup of Apache Kafka with a Node.js producer and consumer. Apache Kafka is managed with Docker using `docker-compose`.",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node ./app.js",
+    "start:dev": "node --watch ./app.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.19.2",
+    "kafkajs": "^2.2.4"
+  }
+}
